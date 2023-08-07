@@ -1,0 +1,191 @@
+
+.botonera {
+    width: 200px;
+    height: 400px;
+
+    color: white;
+
+    border: solid 1px rgb(0, 184, 245);
+    border-radius: 0 20px 0 0;
+
+    background-color: #224;
+
+    margin-top: 70px;
+    margin-right: -250px;
+
+    /* background-image: url("https://img.wallpapersafari.com/desktop/800/450/29/12/FjHVPw.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+    background:
+        url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed;
+
+    
+
+
+    -moz-box-shadow: 3px 3px 5px 6px #4f4f4f;
+    -webkit-box-shadow: 3px 3px 5px 6px #807d7d;
+    box-shadow: 2px 2px 2px 2px #464646;
+}
+
+
+.pId {
+
+    position: absolute;
+
+    margin: 10px;
+    margin-left: -10px;
+    margin-top: -20px;
+
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Montserrat';
+    
+    text-align: center;
+
+    color: white;
+
+}
+
+.input{
+    display: flex;
+    width: 70px;
+
+}
+
+.searchId{
+    display:flex;
+}
+
+.buscarXId {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    width: 100px;
+    height: 20px;
+    padding: 35px;
+    margin: 10px;
+  
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    /* backdrop-filter: blur(15px); */
+  }
+
+.buscarRandomButton {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor:pointer;
+  
+    width: 100px;
+    height: 20px;
+    padding: 35px;
+    margin: 10px;
+  
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    /* backdrop-filter: blur(15px); */
+  }
+
+  .buscarRandomButton:hover{
+    filter: brightness(90%);
+  
+  }
+  
+  .buscarRandomButton:hover .pRandom{
+    color:rgb(75, 75, 146);
+  
+  }
+  
+  .buscarRandomButton:hover .pClean{
+    color:rgb(75, 75, 146);
+  
+  }
+
+  .buscarXId:hover{
+    box-shadow: inset;
+  }
+
+  .boton{
+    display: contents;
+  }
+
+  .searchId{
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 29px;
+
+    width: 133px;
+    height: 23px;
+
+    background-color: white;
+    border: solid 1px rgb(2, 192, 255);
+    border-radius: 5px;
+  }
+
+  .searchIdButton{
+    background-color: rgb(0, 162, 255);
+    color: white;
+    border: solid 1px rgb(0, 191, 255);
+
+    height: 25px;
+
+    margin-bottom: 15px;
+
+  }
+
+  .searchIdButton:hover{
+    background-color: #224;
+
+  }
+
+
+  .pRandom{
+    position: absolute;
+
+    cursor:pointer;
+
+    margin: 10px;
+    margin-left: -15px;
+    margin-top: -15px;
+
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Montserrat';
+    
+    text-align: center;
+
+    color: white;
+  }
+
+  .pClean{
+    position: absolute;
+
+    cursor:pointer;
+
+    margin: 10px;
+    margin-left: -10px;
+    margin-top: 0px;
+
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Montserrat';
+    
+    text-align: center;
+
+    color: white;
+  }
+
+  .pClean:hover{
+    color:#224;
+  }

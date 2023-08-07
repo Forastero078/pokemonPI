@@ -1,0 +1,82 @@
+.app {
+  background: rgba(42, 69, 86, 0.95);
+  text-align: center;
+  display: flex;
+  height: 100vh; 
+  /* Ocupa el 100% de la altura de la ventana */
+}
+
+.app-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app-link {
+  color: #61dafb;
+}
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.navbar {
+  position: fixed;
+  width: 60px; /* Ancho de la NavBar */
+  background-color: rgba(1, 44, 70, 0.95);
+  /* Otros estilos de la NavBar */
+  transition: width 0.3s ease; /* Agrega una transición suave */
+  overflow: hidden;
+}
+
+.navbar:hover {
+  width: 200px;
+  padding-right: 40px;
+}
+
+/* Estilos para mostrar la NavBar horizontalmente */
+.navbar:hover .nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+.contenido {
+  flex-grow: 1; /* El contenido crece para llenar el espacio restante */
+  padding: 20px;
+  display: contents;
+  margin-left: -200px; 
+  /* Otros estilos del contenido */
+}
+

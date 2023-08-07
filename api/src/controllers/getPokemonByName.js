@@ -1,0 +1,34 @@
+const axios = require("axios");
+const { Pokemondb } = require('../db.js')
+
+
+
+const getPokemonByName = async(req, res) => {
+
+    const { name } = req.query;
+
+
+    try {
+           
+
+        const dbResult = await Pokemondb.findOne({ where: { name: name } });
+
+
+
+        
+        if(dbResult){
+              res.status(200).json(dbResult); 
+        } else {
+            throw new Error('No hay Pokemons con ese nombre')
+        }
+
+    } catch(error){
+
+        res.status(400).json({error: error.message});
+
+    }
+}
+
+module.exports = {
+    getPokemonByName
+}

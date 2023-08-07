@@ -1,0 +1,17 @@
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+
+    width: 70%;
+    height: 10%;
+
+    border: solid 3px rgb(4, 78, 103);
+    border-radius: 20px 0px 0px 20px;
+
+    background:
+        url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed;
+
+    margin-top: -250px; 
+}

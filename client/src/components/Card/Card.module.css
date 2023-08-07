@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap');
+
+/* 
+.card{
+
+    position:relative;
+
+    width: 200px;
+    height: 200px;
+
+    background-color: black;
+
+    border: solid 1px rgb(197, 197, 96);
+    border-radius: 20px;
+
+    padding: 10px;
+    margin: 20px;
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
+} */
+
+
+
+
+.card {
+
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-family: 'Kanit';
+    font-size: 10px;
+  
+    width: 100px;
+    height: 100px;
+    padding: 35px;
+    margin: 10px;
+  
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    
+  }
+
+  .card:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+    }
+
+    .card:hover img {
+    transform: scale(1.2);
+    }
+
+
+    
+    .name {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      /* color: white;
+      background-color: rgba(0, 0, 0, 0.7); */
+      padding: 5px;
+        
+      }
+      
+      .name:not(:last-child) {
+        margin-bottom: 1.5em;
+      }
+
+
+.img{
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+
+.fav {
+  display: none;
+
+  font-size: 12px;
+  
+  width: fit-content;
+  
+  height: fit-content;
+  margin-left: -15px;
+  margin-top: 40px;
+  margin-bottom: -50px;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(27, 43, 57);
+  position: relative;
+  z-index: 9999;
+}
+
+.fav:hover{
+  color:red;
+  cursor:pointer;
+
+}
+
+.buttons{
+  display: flex;
+}
+
+
+.onClose{
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 95px;
+  margin-top: 50px;
+  margin-bottom: -60px;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(184, 5, 5);
+  position: relative;
+  z-index: 9999;
+}
+
+
+
+.link{
+  text-decoration: none;
+  color:rgb(74, 73, 73);
+}
+
+
