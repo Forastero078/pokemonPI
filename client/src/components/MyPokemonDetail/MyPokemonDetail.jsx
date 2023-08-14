@@ -1,5 +1,5 @@
 import axios from 'axios';
-import styles from './Detail.module.css';
+import styles from './MyPokemonDetail.module.css';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 
 
 
-export default function Detail(props) {
+export default function MyPokemonDetail(props) {
 
     const [character, setCharacter] = useState({});
 
@@ -21,7 +21,7 @@ export default function Detail(props) {
 
         return async function () {
             try {
-                const response = await axios.get(`http://localhost:3001/pokemons/${detailId}`);
+                const response = await axios.get(`http://localhost:3001/mypokemons/${detailId}`);
 
                 setCharacter({ ...response.data })
             } catch (error) {
@@ -36,12 +36,17 @@ export default function Detail(props) {
     const {
         id,
         name,
-        sprites,
-        stats,
-        weight,
+        image,
+        hp,
+        attack,
+        defend,
+        speed,
         height,
+        weight,
         pokeTypes
     } = character;
+
+
 
 
 
@@ -68,7 +73,7 @@ export default function Detail(props) {
 
             <div className={styles.detail}>
 
-                
+
 
 
 
@@ -84,7 +89,7 @@ export default function Detail(props) {
 
 
 
-                <img className={styles.type1} src={sprites && sprites['other']['official-artwork']['front_default']} alt={name} />
+                <img className={styles.type1} src={image} alt={name} />
 
 
                 <p className={styles.type4}><span className={styles.name}>{nombre}</span></p>
@@ -93,10 +98,11 @@ export default function Detail(props) {
 
                     <div className={styles.stats}>
                         <p className={styles.type2}>Pokemón Stat's:</p>
-                        {stats && stats.map((element) => {
-                            return <p className={styles.type3}>{element.stat.name}: <span className={styles.base_stat}>{element.base_stat}</span> </p>
+                        <p className={styles.type3}>hp: <span className={styles.base_stat}>{hp}</span> </p>
+                        <p className={styles.type3}>attack: <span className={styles.base_stat}>{attack}</span> </p>
+                        <p className={styles.type3}>defend: <span className={styles.base_stat}>{defend}</span> </p>
+                        <p className={styles.type3}>speed: <span className={styles.base_stat}>{speed}</span> </p>
 
-                        })}
                     </div>
 
 
@@ -105,14 +111,14 @@ export default function Detail(props) {
                         Altura: <span className={styles.altura}>{realHeight()}</span>mts</p>
 
                     <p className={styles.type}><p className={styles.type2}>Pokemón type's: </p>{pokeTypes && pokeTypes.map((element) => {
-                        return <p className={styles.type3}>.-type:<span className={styles.types}>  {element.type.name[0].toUpperCase() + element.type.name.slice(1)}  </span></p>
+                        return <p className={styles.type3}>.-type:<span className={styles.types}>  {element[0].toUpperCase() + element.slice(1)}  </span></p>
                     })}
                     </p>
 
-                    <button onClick={()=> console.log(character)}>  LOG   </button>
-                    
-                    
-                    
+                    <button onClick={() => console.log(character)}>  LOG   </button>
+
+
+
                 </div>
 
 

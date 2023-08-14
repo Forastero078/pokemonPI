@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+
+    width: 70%;
+    height: 10%;
+
+    border: solid 3px rgb(4, 78, 103);
+    border-radius: 20px 0px 0px 20px;
+
+    background:
+        url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed;
+
+    margin-top: -300px; 
+    margin-left: 57px;
+}
+
+.botones{
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    width: auto;
+    height: 40px;
+
+    position: absolute;
+    left: 25%;
+    transform: translateX(50%);
+
+    background-color: rgba(3, 101, 167, 0.363);
+    opacity: 90%;
+
+    border: solid 1px rgb(253, 247, 247);
+    border-radius: 20px 0 20px 0;
+
+    padding: 5px;
+}
+
+.atrasAdelante{
+
+    border:solid white 1px;
+    background-color: rgba(42, 42, 97, 0.178);
+    color:white;
+
+    font-size: 20px;
+
+    border-radius: 20px;
+
+    font-family: 'Amatic SC';
+}
+
+.atrasAdelante:hover{
+    background-color: antiquewhite;
+    color: black;
+    cursor: pointer;
+}
+
+.p {
+    color: white;
+    font-family: 'Amatic SC';
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.currentPage{
+    
+    padding: 5px;
+    padding-right: 7px;
+    margin-top: -20px;
+
+    width: 20px;
+    
+}

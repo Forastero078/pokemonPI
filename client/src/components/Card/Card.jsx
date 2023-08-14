@@ -1,21 +1,24 @@
 import styles from './Card.module.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import handlerTypeColor from './handlerTypeColor.js';
 
 
 
 export default function Card(props) {
 
-    const [ isFav, setIsFav ] = useState(false)
+
     const {
         id,
         name,
         sprites,
-        // species,
-        // weight,
-        // height,
-        // types
+        species,
+        weight,
+        height,
+        types,
+        myPokemon
+        
+
     } = props;
 
     const nombre = name[0].toUpperCase() + name.slice(1);
@@ -28,22 +31,27 @@ export default function Card(props) {
 
 
         <div className={styles.divPadre}>
-                    <div className={styles.buttons}>
-                    <div className={styles.fav}>
-                        
-                        <span className={styles.like} onClick={()=> alert('emulacion')}>{isFav ? '❤ Favorite' : '♡ AddFavorite'}</span>
-                    </div>
+            <div className={styles.buttons}>
+                <div className={styles.fav}>
 
-                    </div>
-            <Link className={styles.link} to={`/detail/${id}`}>
+                </div>
 
-                <div className={styles.card}>
+
+
+            </div>
+            <Link className={styles.link} to={myPokemon ? `/mypokemondetail/${id}` : `/detail/${id}`}>
+
+                <div className={styles.card} >
+
+                    <p className={styles.id}>#{id}</p>
+
 
 
                     <img className={styles.img} src={Number(id) < 650 ? sprites.other.dream_world.front_default : sprites['other']['official-artwork']['front_default']} alt={id + name} />
-                    {/* <h1 className={styles.id}> {id} </h1> */}
-                    <h1 className={styles.name}> {nombre} </h1>
 
+                    <section className={handlerTypeColor(types)}>
+                        <h1 className={styles.name}> {nombre} </h1>
+                    </section>
                 </div>
 
             </Link>

@@ -16,7 +16,10 @@ export default function NavBar(){
             <NavLink to='/home' className={({isActive}) => isActive ? styles.active : styles.link}> ⌂ <span className={styles.text}>Home</span> </NavLink>
             <br/>
             <hr/>
-            <NavLink to='/fav' className={({isActive}) => isActive ? styles.active : styles.link}> 🎔 <span className={styles.text}>Favorites</span> </NavLink>
+            <NavLink to='/myPokemons' className={({isActive}) => isActive ? styles.active : styles.link}> ❤ <span className={styles.text}>myPokemóns</span> </NavLink>
+            <br/>
+            <hr/>
+            <NavLink to='/create' className={({isActive}) => isActive ? styles.active : styles.link}> ✗ <span className={styles.text}>Crear mi Pokemón!</span> </NavLink>
             <br/>
             <hr/>
             <NavLink to='/about' className={({isActive}) => isActive ? styles.active : styles.link}> ➔ <span className={styles.text}>About</span> </NavLink>

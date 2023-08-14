@@ -25,7 +25,7 @@ const { conn } = require('./src/db.js');
 // Syncing all the models at once.
 const syncDB = async() => {
   try {
-await conn.sync({ force: false }).then(() => { // poner en true para cargar la base de datos 
+await conn.sync({ force: true }).then(() => { // poner en true para cargar la base de datos 
   server.listen(3001, () => {
     console.log('Server listening at 3001'); // eslint-disable-line no-console
   });

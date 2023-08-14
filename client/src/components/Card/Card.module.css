@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 /* 
 .card{
@@ -62,6 +63,8 @@
 
     
     .name {
+
+      color:white;
       position: absolute;
       bottom: -5px;
       left: 50%;
@@ -142,3 +145,261 @@
 }
 
 
+.id {
+
+  position: absolute;
+
+  margin-left: 70%;
+  margin-bottom: 80%;
+
+ font-family:monospace;
+  font-size: 30px;
+  color: rgb(48, 47, 47);
+  
+
+
+  z-index: 9999;
+}
+
+
+.grass {
+  position:absolute;
+
+  background-color: rgb(29, 241, 29);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.fighting{
+  position:absolute;
+
+  background-color: rgb(226, 15, 15);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.flying{
+  position:absolute;
+
+  background-color: rgba(4, 109, 128, 0.575);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.fire {
+  position:absolute;
+
+  background-color: rgb(248, 82, 6);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.water {
+  position:absolute;
+
+  background-color: rgb(12, 179, 245);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+.bug {
+  position:absolute;
+
+  background-color: rgb(203, 238, 5);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+.ground {
+  position:absolute;
+
+  background-color: rgba(161, 93, 4, 0.808);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.poison {
+  position:absolute;
+
+  background-color: rgb(106, 21, 241);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.rock {
+  position:absolute;
+
+  background-color: rgb(151, 151, 151);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.ghost {
+  position:absolute;
+
+  background-color: rgb(63, 90, 69);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.steel {
+  position:absolute;
+
+  background-color: rgba(145, 161, 145, 0.781);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.electric {
+  position:absolute;
+
+  background-color: rgb(228, 253, 0);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.psychic {
+  position:absolute;
+
+  background-color: rgb(14, 10, 224);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.ice {
+  position:absolute;
+
+  background-color: rgb(116, 181, 255);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.dragon {
+  position:absolute;
+
+  background-color: #7e0d09;
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.dark {
+  position:absolute;
+
+  color:white;
+
+  background-color: rgb(0, 0, 0);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.fairy {
+  position:absolute;
+
+  background-color: rgb(240, 125, 221);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.unknown {
+  position:absolute;
+
+  background-color: rgb(186, 190, 186);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.shadow {
+  position:absolute;
+
+  color:white;
+  background-color: rgb(29, 30, 37);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}
+
+.normal {
+  position:absolute;
+
+  color:white;
+  background-color: rgb(2, 134, 117);
+  width: 100%;  
+  height: 20%;
+
+  border-radius: 0 0 20px 20px;
+
+  margin-top:80%;
+}

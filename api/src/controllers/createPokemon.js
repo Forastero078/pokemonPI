@@ -11,7 +11,8 @@ const createPokemon = async(req, res) => {
         defend, 
         speed, 
         height, 
-        weight } = req.body
+        weight,
+    pokeTypes } = req.body
 
 
     try{
@@ -24,7 +25,8 @@ const createPokemon = async(req, res) => {
             defend: defend,
             speed: speed,
             height: height,
-            weight: weight
+            weight: weight,
+            pokeTypes: pokeTypes
         });
 
         res.status(200).json(newChar.toJSON())

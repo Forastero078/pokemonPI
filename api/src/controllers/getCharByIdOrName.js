@@ -28,7 +28,7 @@ const getCharByIdOrName = async(req, res) => {
                 stats: searchByNameOrID.stats,
                 weight: searchByNameOrID.weight,
                 height: searchByNameOrID.height,
-                types: searchByNameOrID.types
+                pokeTypes: searchByNameOrID.pokeTypes
             
           })
         } catch(error) {

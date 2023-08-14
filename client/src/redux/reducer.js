@@ -1,12 +1,14 @@
-import { ADD_ALLPOKEMONS, ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./actions";
+import { ADD_ALLPOKEMONS, ADD_MYPOKEMONS, DELETE_MYPOKEMON, FILTER, ORDER } from "./actions";
 
 
 
 const initialState = {
 
     allPokemons: [],
+    allPokemonsBUp: [],
     myPokemons: [],
     myPokemonsBUp: []
+    
 }
 
 
@@ -16,36 +18,42 @@ export default function rootReducer(state = initialState, { type, payload }){
         case ADD_ALLPOKEMONS:
             return {
                 ...state,
-                allPokemons: [...payload]
+                allPokemons: [...payload],
+                allPokemonsBUp: [...payload]
             }
-        case ADD_FAVORITE:
+        case ADD_MYPOKEMONS:
             return {
                 ...state,
                 myPokemons: [...payload],
                 myPokemonsBUp: [...payload]
             }
 
-        case DELETE_FAVORITE:
+        case DELETE_MYPOKEMON:
             return {
                 ...state,
                 myPokemons: [...payload]
             }
 
         case FILTER:
-            const { allPokemons } = state;
+            const { allPokemonsBUp } = state;
+            console.log({payload: payload})
 
-            if(payload === 'Todos los Pokemones'){
+            if(payload === 'Todos los Pokemónes'){
                 return {
                     ...state,
-                    myPokemons: [...allPokemons]
+                    allPokemons: [...state.allPokemonsBUp]
                 }
             }
-
-            let filter = allPokemons.filter((element) => element.types.type.name === payload);
+            
+                let filter = allPokemonsBUp.filter((element) => {
+                    return element.pokeTypes[0].type.name === payload
+                })
+            
+            
 
             return {
                 ...state,
-                myPokemons: [...filter]
+                allPokemons: [...filter]
             }
 
         case ORDER:

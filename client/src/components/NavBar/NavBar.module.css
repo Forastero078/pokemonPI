@@ -20,21 +20,21 @@
 }
 .sideNavBar:hover .text{
     display: contents;
+    color: white;
 }
 
 
 .link{
     text-decoration: none;
-    /* color:white; */
+    
 }
 
 .link:not(.active) {
-    /* Estilos para los enlaces no activos */
     color:white;
   }
 
 .active{
-    color: rgb(118, 115, 115) !important;
+    color: rgb(118, 115, 115);
     text-decoration: none;
 }
 

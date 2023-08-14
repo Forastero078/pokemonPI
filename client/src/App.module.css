@@ -46,7 +46,7 @@
 
 
 .navbar {
-  position: fixed;
+  /* position: fixed; */
   width: 60px; /* Ancho de la NavBar */
   background-color: rgba(1, 44, 70, 0.95);
   /* Otros estilos de la NavBar */

@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export const ADD_ALLPOKEMONS = 'ADD_ALLPOKEMONS';
-export const ADD_FAVORITE = 'ADD_FAVORITE';
-export const DELETE_FAVORITE = 'DELETE_FAVORITE';
+export const ADD_MYPOKEMONS = 'ADD_MYPOKEMONS';
+export const DELETE_MYPOKEMON = 'DELETE_MYPOKEMON';
 export const FILTER = 'FILTER';
 export const ORDER = 'ORDER';
 
@@ -23,35 +23,35 @@ export const allPokemons = () => {
  }
  }
 
-export const addFavorite = (character) => {
-    const endpoint = 'http://localhost:3001/pokemon/fav';
+export const addMyPokemons = () => {
+    const endpoint = 'http://localhost:3001/mypokemons/';
     return (dispatch) => {
-       axios.post(endpoint, character).then(({ data }) => {
+       axios.get(endpoint).then(({ data }) => {
          
           return dispatch({
-             type: ADD_FAVORITE,
+             type: ADD_MYPOKEMONS,
              payload: data,
           });
        });
     };
  };
 
- export const deleteFavorite = (id) => {
-    const endpoint = 'http://localhost:3001/pokemon/fav/' + id;
+ export const deleteMyPokemon = (id) => {
+    const endpoint = `http://localhost:3001/mypokemons/${id}`;
     return (dispatch) => {
        axios.delete(endpoint).then(({ data }) => {
           return dispatch({
-             type: DELETE_FAVORITE,
+             type: DELETE_MYPOKEMON,
              payload: data,
        });
        });
     };
  };
 
- export const filterCards = (gender) => {
+ export const filterCards = (pokeTypes) => {
     return {
         type: FILTER,
-        payload: gender
+        payload: pokeTypes
     }
 };
 
