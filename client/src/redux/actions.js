@@ -4,7 +4,8 @@ export const ADD_ALLPOKEMONS = 'ADD_ALLPOKEMONS';
 export const ADD_MYPOKEMONS = 'ADD_MYPOKEMONS';
 export const DELETE_MYPOKEMON = 'DELETE_MYPOKEMON';
 export const FILTER = 'FILTER';
-export const ORDER = 'ORDER';
+export const ORDER_ALFABETICO = 'ORDER_ALFABETICO';
+export const ORDER_ATTACK = 'ORDER_ATTACK';
 
 export const allPokemons = () => {
    
@@ -55,9 +56,20 @@ export const addMyPokemons = () => {
     }
 };
 
-export const orderCards = (id) => {
+export const orderAlfabetico = (type) => {
+
+
     return {
-        type: ORDER,
-        payload: id
+        type: ORDER_ALFABETICO,
+        payload: type
     }
+};
+
+export const orderAttack = (type) => {
+
+   
+   return {
+       type: ORDER_ATTACK,
+       payload: type
+   }
 };

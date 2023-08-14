@@ -54,7 +54,7 @@ export default function Portada(props){
                 <br/>
                 
                 <h5 className={styles.userAndPass}>Password:</h5>
-                <input type='text' className={styles.inputs} name='password' value={userData.password} onChange={inputHandlers} placeholder='...contraseña'/>
+                <input type='password' className={styles.inputs} name='password' value={userData.password} onChange={inputHandlers} placeholder='...contraseña'/>
                 { errors.password && <p className={styles.warning}>{errors.password}</p>}
                 
                 <br/>

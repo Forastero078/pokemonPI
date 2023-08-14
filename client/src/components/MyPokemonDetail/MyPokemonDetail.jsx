@@ -115,7 +115,6 @@ export default function MyPokemonDetail(props) {
                     })}
                     </p>
 
-                    <button onClick={() => console.log(character)}>  LOG   </button>
 
 
 

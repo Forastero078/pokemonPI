@@ -1,23 +1,29 @@
+import { useDispatch } from 'react-redux';
 import styles from './Botonera.module.css';
 import React, { useState } from 'react';
+import { addMyPokemons, deleteMyPokemon } from '../../redux/actions';
 
 
 
 
 
-export default function Botonera(props){
+export default function Botonera(){
 
-    const { onSearch, onSearchR, clean } = props;
+    const dispatch = useDispatch();
 
+   
     const [ id, setId ] = useState('');
 
 
     const handlerInput = (event) => {
         setId(event.target.value)
-        console.log(id);
+        
     }
 
-
+    const onSearch = (id) => {
+      dispatch(deleteMyPokemon(id));
+      dispatch(addMyPokemons());
+    }
 
 
     return(
@@ -26,7 +32,7 @@ export default function Botonera(props){
 
         <div className={styles.buscarXId} >
                 
-        <p className={styles.pId}>Selecciona un
+        <p className={styles.pId}>Elimina un
         <br/>
         Pokemón por Id</p>
         <br/>
@@ -39,17 +45,7 @@ export default function Botonera(props){
          
 
             
-        <div className={styles.buscarRandomButton} onClick={onSearchR}>
-            <p className={styles.pRandom}>Selecciona un 
-            <br/>
-            Pokemón al Azar</p>
-
-            </div>  
-        
-        <div className={styles.buscarRandomButton} onClick={clean}>
-            <p className={styles.pClean}>Limpiar Tablero</p>
-
-            </div>  
+          
             
            </div>
             

@@ -2,7 +2,7 @@ import styles from './Home.module.css';
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterCards } from '../../redux/actions';
+import { filterCards, orderAttack, orderAlfabetico } from '../../redux/actions';
 import BotoneraPaginador from '../BotoneraPaginador/BotoneraPaginador';
 import axios from 'axios';
 
@@ -67,6 +67,14 @@ export default function Home(props) {
 
     const handlerType = (e) => {
        dispatch(filterCards(e.target.value))
+    };
+
+    const handlerOrderAlfabetico = (e) => {
+       dispatch(orderAlfabetico(e.target.value))
+    };
+
+    const handlerOrderAttack = (e) => {
+        dispatch(orderAttack(e.target.value))
     }
 
 
@@ -126,8 +134,16 @@ export default function Home(props) {
                     <option value="normal">Normal</option>
                 </select>
 
-                <select name='Types de Pokemóns' className={styles.select} onChange={handlerType}>
-                    <option value="Todos los Pokemónes">Todos los Pokemónes</option>
+                <select name='Orden alfabetico' className={styles.select} onChange={handlerOrderAlfabetico}>
+                    <option value="orden alfabetico">Orden Alfabetico</option>
+                    <option value="ascendente">Ascendente</option>
+                    <option value="descendente">Descendente</option>
+                    </select>
+
+                    <select name='Orden nivel de ataque' className={styles.select} onChange={handlerOrderAttack}>
+                    <option value="nivel de ataque">Nivel de ataque</option>
+                    <option value="ascendente">Ascendente</option>
+                    <option value="descendente">Descendente</option>
                     </select>
 
                 <div className={styles.cards}>
@@ -142,6 +158,7 @@ export default function Home(props) {
                     {characters.length && getCurrentPageItems().map((element) => {
 
                         return <Card
+                            key={element.id + element.name}
                             id={element.id}
                             name={element.name}
                             sprites={element.sprites}

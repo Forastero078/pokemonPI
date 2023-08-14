@@ -21,14 +21,7 @@ export default function MyPokemons(){
     }, [myPokemons]);
 
     
-    const sprites = {
-        other: {
-           dream_world: {
-            front_default: ''
-           }
-        }
-    }
-    
+        
 
     return(
 
@@ -38,6 +31,12 @@ export default function MyPokemons(){
             <div className={styles.scroll}>
 
                 <div className={styles.cards}>
+
+                {!characters.length && <div className={styles.box}>
+                        <div className={styles.space}>
+                            <div className={styles.loading}></div>
+                        </div>
+                    </div>}
 
             {characters.length && characters.map((element) => {
                const pokeType = [{type: {name: element.pokeTypes[0]}}]
@@ -49,6 +48,7 @@ export default function MyPokemons(){
                 }
             }
             return <Card
+            key={element.id + element.name}
             myPokemon={true}
             id={element.id}
             name={element.name}
@@ -64,7 +64,7 @@ export default function MyPokemons(){
             <img className={styles.logo} src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon.png" alt="logo" />
                 
                 
-                    <Botonera />
+                    
 
                     
 

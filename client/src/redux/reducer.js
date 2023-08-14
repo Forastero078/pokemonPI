@@ -1,4 +1,4 @@
-import { ADD_ALLPOKEMONS, ADD_MYPOKEMONS, DELETE_MYPOKEMON, FILTER, ORDER } from "./actions";
+import { ADD_ALLPOKEMONS, ADD_MYPOKEMONS, DELETE_MYPOKEMON, FILTER, ORDER_ALFABETICO, ORDER_ATTACK } from "./actions";
 
 
 
@@ -8,13 +8,13 @@ const initialState = {
     allPokemonsBUp: [],
     myPokemons: [],
     myPokemonsBUp: []
-    
+
 }
 
 
 
-export default function rootReducer(state = initialState, { type, payload }){
-    switch(type){
+export default function rootReducer(state = initialState, { type, payload }) {
+    switch (type) {
         case ADD_ALLPOKEMONS:
             return {
                 ...state,
@@ -36,44 +36,61 @@ export default function rootReducer(state = initialState, { type, payload }){
 
         case FILTER:
             const { allPokemonsBUp } = state;
-            console.log({payload: payload})
+            console.log({ payload: payload })
 
-            if(payload === 'Todos los Pokemónes'){
+            if (payload === 'Todos los Pokemónes') {
                 return {
                     ...state,
                     allPokemons: [...state.allPokemonsBUp]
                 }
             }
-            
-                let filter = allPokemonsBUp.filter((element) => {
-                    return element.pokeTypes[0].type.name === payload
-                })
-            
-            
+
+            let filter = allPokemonsBUp.filter((element) => {
+                return element.pokeTypes[0].type.name === payload
+            })
+
+
 
             return {
                 ...state,
                 allPokemons: [...filter]
             }
 
-        case ORDER:
+        case ORDER_ALFABETICO:
 
-        let charsSort;
-        
-        // let allChar;
-        // if(state) allChar = state.allCharacters 
-        if(payload === 'Ascendente'){
-            let { allCharacters } = state;
-            charsSort = allCharacters.sort((a,b) => a.id - b.id )
-        } else if (payload === 'Descendente'){
-            let { allCharacters } = state;
-         charsSort = allCharacters.sort((a,b) => b.id - a.id );
-        }
+            let charSort;
+            if (payload === 'orden alfabetico') {
+                return { ...state }
+            }
 
-        return {
-            ...state,
-            myFavorites: [...charsSort]
-        };
+            if (payload === 'ascendente') {
+                let { allPokemons } = state;
+                charSort = allPokemons.sort((a, b) => a.name.localeCompare(b.nombre))
+            } else if (payload === 'descendente') {
+                let { allPokemons } = state;
+                charSort = allPokemons.sort((a, b) => b.name.localeCompare(a.name));
+            }
+
+            return {
+                ...state,
+                allPokemons: [...charSort]
+            };
+        case ORDER_ATTACK:
+
+            let charsSort;
+
+            if (payload === 'ascendente') {
+                let { allPokemons } = state;
+                charsSort = allPokemons.sort((a, b) => a.stats[1].base_stat - b.stats[1].base_stat)
+            } else if (payload === 'descendente') {
+                let { allPokemons } = state;
+                charsSort = allPokemons.sort((a, b) => b.stats[1].base_stat - a.stats[1].base_stat);
+            }
+
+            return {
+                ...state,
+                allPokemons: [...charsSort]
+            };
         default:
             return state;
     }
