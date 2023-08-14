@@ -109,7 +109,6 @@ export default function Detail(props) {
                     })}
                     </p>
 
-                    <button onClick={()=> console.log(character)}>  LOG   </button>
                     
                     
                     
