@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+.divPadre {
+    display: block;
+    position: absolute;
+
+    margin-left: 200px;
+}
+
+.box {
+
+    position: relative;
+    left: 40%;
+    transform: translateX(-40%);
+    z-index: 500;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    font-family: 'REM';
+
+    width: 50%;
+    height: 20%;
+    padding: 35px;
+    margin: 10px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+
+.span {
+    text-align: initial;
+    font-size: 13px;
+    color: black;
+
+    font-family: 'Space Mono';
+}
+
+.scroll {
+
+    display: flex;
+
+    position: relative;
+
+
+    overflow: scroll;
+
+    width: 70%;
+    height: 300px;
+
+    margin: 100px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.h1 {
+    z-index: 500;
+
+    position: relative;
+    left: 40%;
+    transform: translateX(-40%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    font-family: 'REM';
+
+    width: 70%;
+    height: fit-content;
+    padding: 35px;
+    margin: 10px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background:
+        url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed;
+
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+
+.img {
+    position: absolute;
+
+    width: 250px;
+    height: 200px;
+
+    border: solid 1px white;
+    border-radius: 20px;
+
+    margin-left: -70px;
+
+}
+
+.img2 {
+    position: absolute;
+
+    width: 250px;
+    height: 200px;
+
+    border: solid 1px white;
+    border-radius: 20px;
+
+    margin-left: -70px;
+    margin-top: 220px;
+
+}
+
+.contact{
+    color: white;
+}

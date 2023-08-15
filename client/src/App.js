@@ -11,10 +11,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { allPokemons, addMyPokemons } from './redux/actions';
 import  MyPokemonDetail  from './components/MyPokemonDetail/MyPokemonDetail';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 function App() {
 
-  const [access, setAccess] = useState(true); // ---> poner en false
+  const [access, setAccess] = useState(false); // ---> poner en false
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -71,6 +72,7 @@ function App() {
           <Route path='/myPokemons' element={<MyPokemons/>} />
           <Route path='/create' element={<Form/>} />
           <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact/>} />
           <Route path='/*' element={'404'} />
         </Routes>
       </div>
