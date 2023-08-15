@@ -31,7 +31,8 @@ export default function rootReducer(state = initialState, { type, payload }) {
         case DELETE_MYPOKEMON:
             return {
                 ...state,
-                myPokemons: [...payload]
+                myPokemons: payload,
+                myPokemonsBUp : payload
             }
 
         case FILTER:

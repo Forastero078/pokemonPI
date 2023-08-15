@@ -23,14 +23,14 @@
 .scroll {
     overflow: auto;
 
-    width: 70%;
+    width: 60%;
     height: 70%;
 
 
 
     margin: 40px;
     margin-top: 70px;
-    margin-left: -30px;
+    margin-left: 70px;
 
     /* border: solid rgb(4, 180, 239) 3px; */
     border: solid 3px rgb(4, 78, 103);
@@ -103,7 +103,7 @@
 
   @keyframes loading {
     0% {
-      left: -100%;
+      left: 0;
     }
   
     100% {

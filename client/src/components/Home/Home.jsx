@@ -155,7 +155,7 @@ export default function Home(props) {
                     </div>}
 
 
-                    {characters.length && getCurrentPageItems().map((element) => {
+                    {(characters.length > 0) && getCurrentPageItems().map((element) => {
 
                         return <Card
                             key={element.id + element.name}

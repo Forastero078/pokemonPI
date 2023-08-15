@@ -3,6 +3,7 @@ import styles from './MyPokemonDetail.module.css';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import handlerTypeColor from './handlerTypeColor';
 
 
 
@@ -115,6 +116,8 @@ export default function MyPokemonDetail(props) {
                     })}
                     </p>
 
+
+                    <div className={pokeTypes && handlerTypeColor(pokeTypes[0])}></div>
 
 
 

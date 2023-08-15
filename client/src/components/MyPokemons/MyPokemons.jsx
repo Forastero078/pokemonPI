@@ -16,8 +16,8 @@ export default function MyPokemons(){
     const myPokemons = useSelector((state) => state.myPokemons);
 
 
-    useEffect(() => {
-        setCharacters([...myPokemons]);
+    useEffect(() => {        
+        setCharacters(myPokemons);
     }, [myPokemons]);
 
     
@@ -38,7 +38,7 @@ export default function MyPokemons(){
                         </div>
                     </div>}
 
-            {characters.length && characters.map((element) => {
+            {(characters.length > 0) && characters.map((element) => {
                const pokeType = [{type: {name: element.pokeTypes[0]}}]
                const sprites = {
                 other: {
@@ -66,7 +66,7 @@ export default function MyPokemons(){
                 
                     
 
-                    
+                    <Botonera/>
 
 
                                

@@ -21,8 +21,9 @@ export default function Botonera(){
     }
 
     const onSearch = (id) => {
-      dispatch(deleteMyPokemon(id));
-      dispatch(addMyPokemons());
+    
+      dispatch(deleteMyPokemon(id));       
+        
     }
 
 
@@ -38,7 +39,7 @@ export default function Botonera(){
         <br/>
         <div className={styles.searchId}>
         <input className={styles.input} name='id' value={id} onChange={handlerInput}/>
-        <button className={styles.searchIdButton} onClick={() => onSearch(id)}>Buscar</button>
+        <button className={styles.searchIdButton} onClick={() => onSearch(id)}>Eliminar</button>
         </div>
         
         </div>  

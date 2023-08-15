@@ -10,6 +10,7 @@ import Form from './components/Form/Form';
 import { useDispatch, useSelector } from 'react-redux';
 import { allPokemons, addMyPokemons } from './redux/actions';
 import  MyPokemonDetail  from './components/MyPokemonDetail/MyPokemonDetail';
+import About from './components/About/About';
 
 function App() {
 
@@ -69,6 +70,7 @@ function App() {
           <Route path='/mypokemondetail/:detailId' element={<MyPokemonDetail/>} />
           <Route path='/myPokemons' element={<MyPokemons/>} />
           <Route path='/create' element={<Form/>} />
+          <Route path='/about' element={<About/>} />
           <Route path='/*' element={'404'} />
         </Routes>
       </div>

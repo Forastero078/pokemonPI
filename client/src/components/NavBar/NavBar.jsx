@@ -22,14 +22,14 @@ export default function NavBar(){
             <NavLink to='/create' className={({isActive}) => isActive ? styles.active : styles.link}> ✗ <span className={styles.text}>Crear mi Pokemón!</span> </NavLink>
             <br/>
             <hr/>
-            {/* <NavLink to='/about' className={({isActive}) => isActive ? styles.active : styles.link}> ➔ <span className={styles.text}>About</span> </NavLink>
+            <NavLink to='/about' className={({isActive}) => isActive ? styles.active : styles.link}> ➔ <span className={styles.text}>About</span> </NavLink>
 
             <br/>
             <hr/>
             <NavLink to='/contact' className={({isActive}) => isActive ? styles.active : styles.link}> ☏ <span className={styles.text}>Contact</span> </NavLink>
 
             <br/>
-            <hr/> */}
+            <hr/>
             </div>
 
         </div>
