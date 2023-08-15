@@ -2,8 +2,7 @@ import styles from './MyPokemons.module.css';
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import Botonera from '../Botonera/Botonera';
-import { addMyPokemons, deleteMyPokemon } from '../../redux/actions';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 
@@ -11,15 +10,7 @@ export default function MyPokemons(){
 
     const [ characters, setCharacters ] = useState([]);
 
-    const dispatch = useDispatch();
-
     const myPokemons = useSelector((state) => state.myPokemons);
-
-    const updateMyPokemons = () => {
-        setCharacters([])
-        setTimeout(setCharacters([myPokemons]), 1000)
-    }
-
 
     useEffect(() => {        
         setCharacters(myPokemons);
@@ -71,7 +62,7 @@ export default function MyPokemons(){
                 
                     
 
-                    <Botonera updateMyPokemons={updateMyPokemons}/>
+                    <Botonera />
 
 
                                

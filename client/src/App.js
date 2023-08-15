@@ -7,7 +7,7 @@ import Home from './components/Home/Home';
 import Detail from './components/Detail/Detail';
 import MyPokemons from './components/MyPokemons/MyPokemons';
 import Form from './components/Form/Form';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { allPokemons, addMyPokemons } from './redux/actions';
 import  MyPokemonDetail  from './components/MyPokemonDetail/MyPokemonDetail';
 import About from './components/About/About';
@@ -15,12 +15,11 @@ import Contact from './components/Contact/Contact';
 
 function App() {
 
-  const [access, setAccess] = useState(true); // ---> poner en false
+  const [access, setAccess] = useState(false); // ---> poner en false
 
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
-  const myPokemons = useSelector((state) => state.myPokemons);
 
   const usuario = 'leonardo.carofiglio@hotmail.com';
   const contraseña = 'Henry1234';
@@ -40,12 +39,12 @@ function App() {
 
   useEffect(() => {
     !access && navigate('/');
-  }, [access]);
+  }, [access, navigate]);
 
   useEffect(() => {
     dispatch(allPokemons());
     dispatch(addMyPokemons());    
-    },[]);
+    },[dispatch]);
 
   
 

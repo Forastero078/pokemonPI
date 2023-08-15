@@ -1,5 +1,5 @@
 import styles from './Card.module.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import handlerTypeColor from './handlerTypeColor.js';
 
@@ -12,9 +12,6 @@ export default function Card(props) {
         id,
         name,
         sprites,
-        species,
-        weight,
-        height,
         types,
         myPokemon
         

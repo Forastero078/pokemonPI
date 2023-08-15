@@ -1,28 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
-/* 
-.card{
-
-    position:relative;
-
-    width: 200px;
-    height: 200px;
-
-    background-color: black;
-
-    border: solid 1px rgb(197, 197, 96);
-    border-radius: 20px;
-
-    padding: 10px;
-    margin: 20px;
-
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    
-} */
-
 
 
 
@@ -149,7 +127,7 @@
 
   position: absolute;
 
-  margin-left: 70%;
+  margin-left: 60%;
   margin-bottom: 80%;
 
  font-family:monospace;

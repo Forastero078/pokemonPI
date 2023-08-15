@@ -8,7 +8,7 @@ import handlerTypeColor from './handlerTypeColor';
 
 
 
-export default function Detail(props) {
+export default function Detail() {
 
     const [character, setCharacter] = useState({});
 
@@ -35,7 +35,6 @@ export default function Detail(props) {
     }, [detailId]);
 
     const {
-        id,
         name,
         sprites,
         stats,

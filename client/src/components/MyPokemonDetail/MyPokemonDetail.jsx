@@ -35,7 +35,6 @@ export default function MyPokemonDetail(props) {
     }, [detailId]);
 
     const {
-        id,
         name,
         image,
         hp,

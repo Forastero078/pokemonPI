@@ -58,7 +58,7 @@ export default function About() {
                         <br />
                         ¡Disfruta al máximo!
                     </span>
-                    
+
                 </div>
                 <img className={styles.img} src="https://www.namasteui.com/wp-content/uploads/2019/07/Full-Stack-Developer.jpg" alt="FullStack" />
 

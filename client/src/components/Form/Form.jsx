@@ -44,7 +44,7 @@ export default function Form() {
                     types: [e.target.value]})   
             }
 
-    console.log(inputs.types)
+    
     };
 
     const handlerSubmit = (e) => {
@@ -62,7 +62,6 @@ export default function Form() {
             weight: inputs.weight,
             pokeTypes: inputs.types
         }).then((response) => {
-            console.log(response.data);
             alert( `Tu Pokemón ${response.data.name} ha sido creado con exito`);
             setInputs({
                 name: '',
@@ -106,7 +105,7 @@ export default function Form() {
 
             <form className={styles.form} onSubmit={handlerSubmit}>
 
-                <img className={styles.img} src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/357d3914-50a1-459f-9d00-2e6cadcfd4cf/d3inxsc-7872dcb0-d259-44e8-87d3-713a8555afbb.png/v1/fill/w_895,h_893,q_75,strp/bulbasaur_by_yuuk3-d3inxsc.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zNTdkMzkxNC01MGExLTQ1OWYtOWQwMC0yZTZjYWRjZmQ0Y2YvZDNpbnhzYy03ODcyZGNiMC1kMjU5LTQ0ZTgtODdkMy03MTNhODU1NWFmYmIucG5nIiwid2lkdGgiOiI8PTg5NSIsImhlaWdodCI6Ijw9ODkzIn1dXX0.uDEZu9ujCg6x9TRGpmdv4jvHOkXZ5PKuUHzreS4gL4g" />
+                <img className={styles.img} src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/357d3914-50a1-459f-9d00-2e6cadcfd4cf/d3inxsc-7872dcb0-d259-44e8-87d3-713a8555afbb.png/v1/fill/w_895,h_893,q_75,strp/bulbasaur_by_yuuk3-d3inxsc.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zNTdkMzkxNC01MGExLTQ1OWYtOWQwMC0yZTZjYWRjZmQ0Y2YvZDNpbnhzYy03ODcyZGNiMC1kMjU5LTQ0ZTgtODdkMy03MTNhODU1NWFmYmIucG5nIiwid2lkdGgiOiI8PTg5NSIsImhlaWdodCI6Ijw9ODkzIn1dXX0.uDEZu9ujCg6x9TRGpmdv4jvHOkXZ5PKuUHzreS4gL4g" alt='CreatePokemon'/>
 
 
                 <div className={`${styles.group}`}>

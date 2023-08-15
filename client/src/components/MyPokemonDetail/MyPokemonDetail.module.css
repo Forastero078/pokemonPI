@@ -2,20 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@1,500&display=swap');
 
-/* 
-.popup {
-    
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-
-    filter: brightness(40%);
-} */
 
 .popup {
   position: relative;
@@ -98,8 +84,7 @@
 
   font-family: 'REM';
 
-  /* margin-left: 134px;
-    margin-top: -420px; */
+
 }
 
 .weightAndHeight {
@@ -117,8 +102,7 @@
   margin-left: 270px;
   margin-top: 250px;
 
-  /* margin-top: 150px;
-    margin-left: 140px; */
+  
 
   position: absolute;
 
@@ -126,7 +110,7 @@
 
   z-index: 9999;
 
-  /* margin-top: -400px; */
+  
 }
 
 .type {
