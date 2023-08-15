@@ -43,7 +43,7 @@ export default function handlerTypeColor(type) {
             return styles.psychic
 
         case 'ice':
-            return styles.slice
+            return styles.ice
 
         case 'dragon':
             return styles.dragon
