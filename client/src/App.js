@@ -15,7 +15,7 @@ import Contact from './components/Contact/Contact';
 
 function App() {
 
-  const [access, setAccess] = useState(false); // ---> poner en false
+  const [access, setAccess] = useState(true); // ---> poner en false
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -44,12 +44,10 @@ function App() {
 
   useEffect(() => {
     dispatch(allPokemons());
-    
+    dispatch(addMyPokemons());    
     },[]);
 
-  useEffect(() => {
-    dispatch(addMyPokemons());
-  },[]);
+  
 
  
   

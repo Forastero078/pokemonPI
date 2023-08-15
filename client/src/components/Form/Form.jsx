@@ -36,8 +36,13 @@ export default function Form() {
     };
 
     const handlerType = (e) => {
-       setInputs({...inputs,
+        if(typeof inputs.types === 'object' && Array.isArray(inputs.types)){
+            setInputs({...inputs,
     types: [...inputs.types, e.target.value]})
+            } else {
+                setInputs({...inputs,
+                    types: [e.target.value]})   
+            }
 
     console.log(inputs.types)
     };

@@ -15,6 +15,11 @@ export default function MyPokemons(){
 
     const myPokemons = useSelector((state) => state.myPokemons);
 
+    const updateMyPokemons = () => {
+        setCharacters([])
+        setTimeout(setCharacters([myPokemons]), 1000)
+    }
+
 
     useEffect(() => {        
         setCharacters(myPokemons);
@@ -66,7 +71,7 @@ export default function MyPokemons(){
                 
                     
 
-                    <Botonera/>
+                    <Botonera updateMyPokemons={updateMyPokemons}/>
 
 
                                

@@ -29,10 +29,12 @@ export default function rootReducer(state = initialState, { type, payload }) {
             }
 
         case DELETE_MYPOKEMON:
+
+            const filtrado = state.myPokemons.filter((element) => element.id !== payload.id)
             return {
                 ...state,
-                myPokemons: payload,
-                myPokemonsBUp : payload
+                myPokemons: filtrado,
+                
             }
 
         case FILTER:

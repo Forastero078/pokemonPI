@@ -14,7 +14,7 @@ const deleteMyPokemon = async (req, res) => {
               })
               .then((PokemonsEliminados) => {
                 if(PokemonsEliminados > 0){
-                    res.status(200).json('Se ha eliminado el Pokemon');
+                    res.status(200).json({id: Number(id)});
                 } else {
                     res.status(400).json('Ha ocurrido un error');
                 }
