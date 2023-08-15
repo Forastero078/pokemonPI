@@ -36,6 +36,8 @@ const createPokemon = async(req, res) => {
     }
 };
 
+// sin mucho que comentar, recibe la data por body y envia una respuesta json del pokemon creado
+
 
 module.exports = {
     createPokemon

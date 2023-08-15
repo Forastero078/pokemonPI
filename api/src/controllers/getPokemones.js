@@ -1,4 +1,3 @@
-const axios = require('axios');
 const { Pokemondb } = require('../db')
 
 
@@ -16,6 +15,8 @@ const getPokemones = async (req, res) => {
         res.status(400).json({error: error.message});
     }
 }
+
+// trae todos los pokemones de la DB, hace un ordenamiento de menor a mayor segun id y devuelve la response ordenada
 
 
 

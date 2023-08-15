@@ -6,11 +6,11 @@ module.exports = (sequelize) => {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true  // tipo numerico, primarykey y de autoincremento
           },
           name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false,  // tipo string, notNull
           }
     },
     {

@@ -20,21 +20,14 @@ const getMyPokemonDetail = async(req, res) => {
     
     
              res.status(200).json(searchByNameOrID)
-        //   res.status(200).json({
-            
-        //         id: searchByNameOrID.id,
-        //         name: searchByNameOrID.name,
-        //         sprites: searchByNameOrID.sprites,
-        //         stats: searchByNameOrID.stats,
-        //         weight: searchByNameOrID.weight,
-        //         height: searchByNameOrID.height,
-        //         pokeTypes: searchByNameOrID.pokeTypes
-            
-        //   })
+
         } catch(error) {
              res.status(400).json({error: error.message})
         }
 }
+
+//Primero se fija que sea un valor numerico o no, guarda la respuesta en la variable y la devuelve 
+
 
 module.exports = {
     getMyPokemonDetail

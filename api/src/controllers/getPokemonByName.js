@@ -1,4 +1,3 @@
-const axios = require("axios");
 const { Pokemondb } = require('../db.js')
 
 
@@ -29,6 +28,7 @@ const getPokemonByName = async(req, res) => {
     }
 }
 
+// busca el pokemon de la base de datos por name y lo devuelve en response
 module.exports = {
     getPokemonByName
 }

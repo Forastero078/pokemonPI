@@ -62,6 +62,8 @@ Pokemondb.belongsToMany(Type, {
  });
 
 
+ //timeOut en 1 min. ya que al principio no me daba tiempo a cargar la base de datos
+
 module.exports = {
    ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
    conn: sequelize, // para importart la conexión { conn } = require('./db.js');

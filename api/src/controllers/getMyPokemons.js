@@ -7,7 +7,7 @@ const getMyPokemons = async (req, res) => {
    try {
             const response = await Pokemon.findAll();
 
-            // const sortResponse = response.sort((a,b) => a.id - b.id);
+            
 
             res.status(200).json(response);
         
@@ -16,6 +16,7 @@ const getMyPokemons = async (req, res) => {
     }
 }
 
+// devuelve una response con todos los registros de los pokemones creados
 
 
 module.exports = {

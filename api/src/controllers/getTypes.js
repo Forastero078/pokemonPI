@@ -19,6 +19,8 @@ const getTypes = async (req, res) => {
     }
 }
 
+// busca todos los types en la DB, los ordena y los devuelve en la response
+
 
 module.exports = {
 getTypes

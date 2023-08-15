@@ -22,6 +22,7 @@ const guardarPokemones = async() => {
 
             const allPokemons = allPokemonDataResponses.map((response) => response.data);
 
+
              allPokemons.map((element) => {
                  Pokemondb.create({ id: element.id,
                                   name: element.name,
@@ -31,6 +32,11 @@ const guardarPokemones = async() => {
                                   height: element.height,
                                   pokeTypes: element.types })
             })
+            
+            // hace un get de los pokemones del 0 al 1000, los mapea y hace un get por cada uno para trarse
+            // la info detallada, espera a que se cumplan todas las promises, guarda la data en la variable
+            //AllPokemons y la mapea para guardar cada registro
+            
             console.log('Pokemons cargados a la base de datos');
         } else {
         console.log('La base de datos esta completa');

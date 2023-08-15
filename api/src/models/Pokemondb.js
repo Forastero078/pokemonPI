@@ -6,32 +6,32 @@ module.exports = (sequelize) => {
   sequelize.define('pokemondb', {          
     id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
+      primaryKey: true, // tipo numerico, primaryKey
       
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false, // tipo string, notNull
     },
     sprites: {
       type: DataTypes.JSON,
-      allowNull: false
+      allowNull: false // tipo objecto, notNull
     },
     stats: {
       type: DataTypes.ARRAY(DataTypes.JSON),
-      allowNull: false
+      allowNull: false // tipo array de objectos
     },
     height: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false  // tipo numerico, notNull
     },
     weight: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false // tipo numerico, notNull
     },
     pokeTypes: {
       type: DataTypes.ARRAY(DataTypes.JSON),
-      allowNull: false
+      allowNull: false  // tipo arreglo de objectos
     }
   },
   {

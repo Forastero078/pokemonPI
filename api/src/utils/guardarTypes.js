@@ -17,6 +17,8 @@ const guardarTypes = async() => {
                  Type.create({ name: element.name })
             })
 
+            // get de todos los types, mapeo y guardado en DB
+
             console.log('Types cargados en la base de datos')
         } else {
             console.log('Los types de la base de datos esta completa')

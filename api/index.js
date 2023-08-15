@@ -29,7 +29,7 @@ await conn.sync({ force: true }).then(() => { // poner en true para cargar la ba
   server.listen(3001, () => {
     console.log('Server listening at 3001'); // eslint-disable-line no-console
   });
-})
+})  
 await guardarPokemones();
 await guardarTypes();
   } catch (error){
@@ -38,5 +38,9 @@ await guardarTypes();
 }
 
 syncDB();
+
+// utilice una funcion async para sincronizar la base de datos con sequelize, de esta manera
+// espera que termine la sincronizacion para ejecutar la funcion guardarPokemones() y guardarTypes(),
+// las cuales se encargan de traerse todos los pokemones/types de la API y guardarlos en la DB.
 
 

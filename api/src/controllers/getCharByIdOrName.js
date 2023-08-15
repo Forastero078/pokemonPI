@@ -17,6 +17,8 @@ const getCharByIdOrName = async(req, res) => {
         searchByNameOrID = await Pokemondb.findOne({ where: { id: Number(idOrName) } });
         }
 
+        //primero se fija si es un valor numerico, y guarda la respuesta de la DB en la variable searchByNameOrID
+
     
     
   
@@ -36,6 +38,8 @@ const getCharByIdOrName = async(req, res) => {
         }
 }
 
+
+//devuelve un objeto con la informacion del pokemon que buscamos
 module.exports = {
     getCharByIdOrName
 }

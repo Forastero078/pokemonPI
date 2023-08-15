@@ -15,7 +15,6 @@ function login(req, res) {
         }         
     }
 
-    // access ? res.status(200).json({access: true}) : res.status(200).json({access: false});
 
     if(access){
         res.status(200).json({access: true});
@@ -24,6 +23,8 @@ function login(req, res) {
     }
      
 }
+
+// busca que haga match y devuelve la respuesta con acces true o false
 
 module.exports = {
     login

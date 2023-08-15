@@ -28,6 +28,9 @@ const deleteMyPokemon = async (req, res) => {
 }
 
 
+//recibe id por params, elimina de la base de datos el pokemon, en caso de exito devuelve un objecto con la
+// propiedad id cuyo valor es el numero de id para posterior filtrado en redux en Front
+
 
 module.exports = {
     deleteMyPokemon
